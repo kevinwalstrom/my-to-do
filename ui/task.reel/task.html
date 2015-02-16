@@ -23,11 +23,20 @@
         "text": {
             "prototype": "digit/ui/text.reel",
             "properties": {
-                "element": {"#": "text"},
                 "value": "Text"
             },
             "bindings": {
                 "value": {"<-": "@owner.task.title"}
+            }
+        },
+        "textField": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "placeholderValue": "Text"
+            },
+            "bindings": {
+                "valur": {"<->": "@owner.task.title"}
             }
         }
     }
@@ -36,7 +45,9 @@
 <body>
     <div data-montage-id="owner" class="Task">
         <input type="checkbox" data-montage-id="checkbox">
-        <p data-montage-id="text"></p>
+
+        </input>
+        <input data-montage-id="textField" type="text">
     </div>
 </body>
 </html>
