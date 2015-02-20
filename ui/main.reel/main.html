@@ -22,78 +22,13 @@
             "_dev": {
                 "isHidden": true
             }
-        },
-        "badge": {
-            "prototype": "digit/ui/badge.reel",
-            "bindings": {
-                "value": {"<-": "@rangeController.organizedContent.filter{!completed}.length"}
-            }
-        },
-        "button": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "button"},
-                "enabled": true,
-                "label": "New Task"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "actionEventListener"}
-                }
-            ]
-        },
-        "list": {
-            "prototype": "digit/ui/list.reel",
-            "properties": {
-                "contentController": {"@": "rangeController"}
-            }
-        },
-        "pikaday2": {
-            "prototype": "ui/pikaday.reel",
-            "properties": {
-                "element": {"#": "pikaday2"}
-            }
-        },
-        "rangeController": {
-            "prototype": "montage/core/range-controller"
-        },
-        "task1": {
-            "prototype": "ui/task.reel",
-            "properties": {
-                "element": {"#": "task1"}
-            },
-            "bindings": {
-                "task": {"<-": "@list:iteration.object"}
-            }
-        },
-        "text": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "value": "Text"
-            }
-        },
-        "title": {
-            "prototype": "digit/ui/title.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": "Things To Do"
-            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <ul data-montage-id="list">
-            <li data-montage-id="task1"></li>
-            <div data-montage-id="pikaday"></div>
-        </ul>
-        <div data-montage-id="pikaday2"></div>
-        <h1 data-montage-id="title"></h1>
-        <button data-montage-id="button">
-            @pikaday2
-        </button>
+
     </div>
 </body>
 </html>
