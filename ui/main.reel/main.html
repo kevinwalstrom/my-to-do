@@ -25,9 +25,6 @@
         },
         "badge": {
             "prototype": "digit/ui/badge.reel",
-            "properties": {
-                "element": {"#": "badge"}
-            },
             "bindings": {
                 "value": {"<-": "@rangeController.organizedContent.filter{!completed}.length"}
             }
@@ -50,6 +47,12 @@
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "contentController": {"@": "rangeController"}
+            }
+        },
+        "pikaday2": {
+            "prototype": "ui/pikaday.reel",
+            "properties": {
+                "element": {"#": "pikaday2"}
             }
         },
         "rangeController": {
@@ -82,12 +85,15 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1 data-montage-id="title"></h1>
-        <button data-montage-id="button"></button>
-        <output data-montage-id="badge"></output>
         <ul data-montage-id="list">
             <li data-montage-id="task1"></li>
+            <div data-montage-id="pikaday"></div>
         </ul>
+        <div data-montage-id="pikaday2"></div>
+        <h1 data-montage-id="title"></h1>
+        <button data-montage-id="button">
+            @pikaday2
+        </button>
     </div>
 </body>
 </html>
