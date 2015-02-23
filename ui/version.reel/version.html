@@ -7,7 +7,16 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "owner"}
+                "element": {"#": "version"}
+            }
+        },
+        "montageVersion": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "montageVersion"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.montageDescription.version"}
             }
         }
     }
